@@ -8,8 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'planning-app';
   loadedFeature = 'recipe';
-
-  onNavigation(selectedView: string){
-    this.loadedFeature = selectedView;
-  }
 }

@@ -19,13 +19,28 @@ export class RecipeService {
                 new Ingredient('Tbsp of salt', 1)
 
             ]
-            )
+            ),
+        new Recipe(
+            "Piña Colada",
+            "Nice, refreshing and creamy piña colada",
+            "https://lomaculinaria.com/wp-content/uploads/2022/07/Pin%CC%83a-Colada-Loma-Culinaria-1200x800-1.jpg",
+            [
+                new Ingredient('Piña slices cans', 2),
+                new Ingredient('Coconut milk can', 2),
+                new Ingredient('Honey tbsp', 3),
+                new Ingredient('Cherry', 1)
+            ]
+        )
     ];
 
     constructor(private shoppingService: ShoppingListService) {}
 
     getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
